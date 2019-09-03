@@ -6,8 +6,8 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.Text1}>Cabeçalho</Text>
-        <Text style={styles.Text2}>Conteúdo</Text>
-        <Text style={styles.Text3}>Rodapé</Text>
+        <Text style={styles.Text2}>Conteúdo deu certo</Text>
+        <Text style={styles.Text3}>Rodapés</Text>
       </View>
     );
   }
