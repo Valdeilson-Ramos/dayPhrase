@@ -1,13 +1,21 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+  TouchableOpacity
+} from "react-native";
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.Text1}>Cabeçalho</Text>
-        <Text style={styles.Text2}>Conteúdo deu certo</Text>
-        <Text style={styles.Text3}>Rodapés</Text>
+        <Image source={require("./img/logo.png")} />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.textButton}>Nova Frase</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -17,27 +25,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "stretch",
-    backgroundColor: "#DA70D6",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFF",
     height: 600
   },
-  Text1: {
-    flex: 1,
-    fontSize: 40,
-    backgroundColor: "#08509B",
-    textAlign: "center"
+  button: {
+    backgroundColor: "#538530",
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    marginTop: 20
   },
-  Text2: {
-    flex: 4,
-    fontSize: 40,
-    backgroundColor: "#2A48FA",
-    textAlign: "center"
-  },
-  Text3: {
-    flex: 2,
-    fontSize: 40,
-    backgroundColor: "#00ced1",
-    textAlign: "center"
+  textButton: {
+    color: "#FFF",
+    fontSize: 16,
+    fontWeight: "bold"
   }
 });
